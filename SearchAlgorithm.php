@@ -18,7 +18,7 @@ function search($authorName, $bookTitle)
 
     }
     if( $authorName !="" and $bookTitle != "") {
-        $query = "SELECT * FROM books Inner Join authors on authors.AuthorId = books.AuthorId WHERE AuthorName = :authorName OR BookName = :bookTitle";
+        $query = "SELECT * FROM books Inner Join authors on authors.AuthorId = books.AuthorId WHERE AuthorName LIKE :authorName AND BookName LIKE :bookTitle";
     }
     $stmt = $db->prepare($query);
     //bind the values to the query only when needed
@@ -67,7 +67,7 @@ function search($authorName, $bookTitle)
     }
 
 </style>
-<body background="background.jpg">
+<body background="background.png">
 <h1>The Books we found for you ! </h1>
     <table class = "BookTable" >
 

@@ -28,7 +28,7 @@
 <h1>
    Welcome to the library !
 </h1>
-    <body style="background-image: url('background.jpg');">
+    <body style="background-image: url('background.png');">
 <?php
 //import the class singleton.php or namespace
 
@@ -52,6 +52,7 @@ $file = fopen("CurrentUser.txt","w");
 file_put_contents("CurrentUser.txt","");
 fwrite($file,$_POST["username"]);
 fclose($file);
+
     if ($PasswordValue == $_POST["password"]){
         //we want to greet the user
         // give them a button to get started on the rest of the application
@@ -75,6 +76,11 @@ fclose($file);
             </h2>
         </a>
 
+        <a href = "Reservation.php">
+            <h2 class = "Reservation">
+                Reserve a book
+            </h2>
+        </a>
         <a href="LogOut.php">
             <h3 >
                 Log out

@@ -11,7 +11,7 @@
 
     }
 </style>
-<body style="background-image: url('background.jpg');">
+<body style="background-image: url('background.png');">
 <h1>Please sign in </h1>
 <?php
 $host = "localhost";
@@ -36,7 +36,8 @@ if ($mysqli->connect_errno) {
 if ($connected) {
     ?>
     <form method="post" action = "CheckingPassword.php">
-    <h1>Conectat cu succes!</h1>
+        <br>
+        <br>
     <p>
         <label for="username">Username:</label>
         <input type="text" name="username" id="username" required placeholder="Email">
@@ -54,24 +55,10 @@ if ($connected) {
     </form>
     <?php
 
-//    fuction button1(){
-//
-//
-//    $ExistentPassword = $mysqli -> query("Select clients.Password From Clients where username = "+$_POST["username"]);
-//        if($ExistentPassword == $_POST["passeword"]){
-//        echo("Registered Succesfully");
-//        }
-//        else{
-//           echo("Opps probleme");
-//        }
-//
-//    }
-
 } else {
     ?>
     <h1>Nu s-a putut conecta :( </h1>
     <h3>Eroare: </h3>
-    <div> <?php echo $error ?></div>
     <?php
 }
 

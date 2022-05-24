@@ -17,7 +17,7 @@ h1{
     text-underline-mode: single;
 }
 </style>
-<body background="background.jpg">
+<body background="background.png">
 <title>See Deadlines</title>
 <body>
 <h1>All Books that you have</h1>
@@ -98,7 +98,7 @@ function print_deadline($deadline){
         echo "<td style='color:red;'>".$deadline."</td>";
     }
     else{
-        echo "<td style='color:green;'>".$deadline."</td>";
+        echo "<td style ='color:black;'>".$deadline."</td>";
     }
 }
 

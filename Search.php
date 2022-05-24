@@ -20,7 +20,7 @@
 <h1>
     Search for a Book with the name of the Author or Title
 </h1>
-<body background="background.jpg"></body>
+<body background="background.png"></body>
 <form  action="SearchAlgorithm.php" method="post">
         <label for="authorName">Search For Author Name:</label>
 <label>
